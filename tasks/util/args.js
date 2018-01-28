@@ -29,4 +29,5 @@ const args = yargs
     describe:'server port'
 })
     //以字符串进行解析
-.argv
+.argv;
+export default args;

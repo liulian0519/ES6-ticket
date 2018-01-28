@@ -6,7 +6,7 @@ import webpack from 'webpack';      //打包
 import gulpWebpack from 'webpack-stream';
 import named from 'vinyl-named';        //重命名
 import livereload from 'gulp-livereload';       //自动刷新  热更新
-import plumber from 'gilp-plumber'; //处理文件信息流
+import plumber from 'gulp-plumber'; //处理文件信息流
 import rename from 'gulp-rename';       //重命名
 import uglify from 'gulp-uglify';       //压缩js css
 import {log,colors} from 'gulp-util';       //命令行输出
@@ -28,7 +28,7 @@ gulp.task('scripts',()=>{
             module:{
                 loaders:[{
                     test:/\.js$/,
-                    loader:'babel'
+                    loader:'babel-loader'
                 }]
             }
         }),null,(err,stats)=>{
